@@ -5,20 +5,38 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.app.Fragment;
-import android.app.Activity;
+
+
 import android.view.View;
-import android.view.ViewGroup;
+
 import android.widget.Button;
 import android.view.View.OnClickListener;
 
 
 public class MainActivity extends ActionBarActivity {
-     private Button button1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Thread timer=new Thread(){
+            @Override
+            public void run() {
+               try{
+                   sleep(5000);
+             } catch (InterruptedException e){
+                   e.printStackTrace();
+
+               }finally{
+                   Intent i=new Intent(MainActivity.this,login.class);
+                   startActivity(i);
+
+               }
+            }
+        };
+        timer.start();
+
+
       /* Button  button1=(Button) findViewById(R.id.button1);
         button1.setOnClickListener(this); */
         Button button1=(Button)findViewById(R.id.button1);
@@ -79,12 +97,6 @@ public class MainActivity extends ActionBarActivity {
         super.onDestroy();
 
     }
-
-
-
-
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
