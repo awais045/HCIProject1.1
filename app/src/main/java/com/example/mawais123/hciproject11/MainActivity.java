@@ -19,7 +19,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Thread timer=new Thread(){
+       Thread timer=new Thread(){
             @Override
             public void run() {
                try{
@@ -64,6 +64,7 @@ public class MainActivity extends ActionBarActivity {
 
 
     }
+
     @Override
     protected void onStart() {
         super.onStart();

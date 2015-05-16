@@ -1,5 +1,6 @@
 package com.example.mawais123.hciproject11;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -7,11 +8,13 @@ import android.view.MenuItem;
 
 
 public class About extends ActionBarActivity {
-
+MediaPlayer ourSong;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+        MediaPlayer ourSong=MediaPlayer.create(About.this,R.raw.arjit);
+        ourSong.start();
     }
     @Override
     protected void onStart() {
@@ -33,6 +36,7 @@ public class About extends ActionBarActivity {
 
     @Override
     protected void onPause() {
+        ourSong.release();
         super.onPause();
     }
 

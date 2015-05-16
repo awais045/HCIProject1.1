@@ -18,21 +18,18 @@ public class login extends ActionBarActivity {
 
         Button button5=(Button)findViewById(R.id.button5);
         button5.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-
                 Intent i=new Intent(login.this,Welcome.class);
                 startActivity(i);
-
-            }
+           }
         });
         Button button6=(Button)findViewById(R.id.button6);
         button6.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
+
                 Intent i=new Intent(login.this,register.class);
                 startActivity(i);
 
