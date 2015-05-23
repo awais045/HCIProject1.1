@@ -61,6 +61,18 @@
             android:name=".About"
             android:label="@string/title_activity_about" >
         </activity>
+        <activity
+            android:name=".complaint_rgsrn"
+            android:label="@string/title_activity_complaint_rgsrn" >
+        </activity>
+        <activity
+            android:name=".final_complaintrgstr"
+            android:label="@string/title_activity_final_complaintrgstr" >
+        </activity>
+        <activity
+            android:name=".User"
+            android:label="@string/title_activity_user" >
+        </activity>
     </application>
 
 </manifest>
