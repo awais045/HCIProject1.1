@@ -7,90 +7,50 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class login extends ActionBarActivity {
+    EditText editTextemail,editTextPassword;
+    Button btnCreateAccount;
+    LoginDataBaseAdapter loginDataBaseAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        // get Instance  of Database Adapter
+        loginDataBaseAdapter = new LoginDataBaseAdapter(this);
+        loginDataBaseAdapter = loginDataBaseAdapter.open();
 
-        Button button5=(Button)findViewById(R.id.button5);
-        button5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(login.this,Welcome.class);
-                startActivity(i);
-           }
-        });
-        Button button6=(Button)findViewById(R.id.button6);
-        button6.setOnClickListener(new View.OnClickListener() {
-            @Override
+        // Get Refferences of Views
+        editTextemail = (EditText) findViewById(R.id.editTextemail);
+        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+
+        btnCreateAccount = (Button) findViewById(R.id.button5);
+
+        btnCreateAccount.setOnClickListener(new View.OnClickListener() {
+
             public void onClick(View v) {
                 // TODO Auto-generated method stub
 
-                Intent i=new Intent(login.this,register.class);
-                startActivity(i);
+                String userName = editTextemail.getText().toString();
+                String password = editTextPassword.getText().toString();
 
+
+                // Save the Data in Database
+                loginDataBaseAdapter.insertEntry(userName, password);
+                Toast.makeText(getApplicationContext(), "Account Successfully Created ", Toast.LENGTH_LONG).show();
             }
         });
-
-    }
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
     }
 
     @Override
     protected void onDestroy() {
+        // TODO Auto-generated method stub
         super.onDestroy();
 
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_login, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+        loginDataBaseAdapter.close();
     }
 }

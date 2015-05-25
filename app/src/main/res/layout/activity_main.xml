@@ -54,7 +54,6 @@
         android:ems="10"
         android:id="@+id/editText"
         android:layout_marginBottom="41dp"
-        android:text="admin@complaintapp.com"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/multiAutoCompleteTextView2"
         android:layout_alignEnd="@+id/multiAutoCompleteTextView2"
@@ -133,7 +132,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Contact Us"
+        android:text="Already Have A account"
         android:longClickable="true"
         android:id="@+id/button9"
         android:layout_alignBottom="@+id/editText"
