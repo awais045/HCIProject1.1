@@ -73,6 +73,10 @@
             android:name=".User"
             android:label="@string/title_activity_user" >
         </activity>
+        <activity
+            android:name=".complaintdetail"
+            android:label="@string/title_activity_complaintdetail" >
+        </activity>
     </application>
 
 </manifest>

@@ -7,12 +7,12 @@
     android:background="@drawable/background"
     tools:context="com.example.mawais123.hciproject11.complaint_rgsrn">
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register Here"
-        android:id="@+id/textView" android:layout_gravity="center"
+        android:text="Register Complaint"
+        android:id="@+id/textView"
+        android:layout_gravity="center"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textColor="#000000"/>
@@ -20,7 +20,7 @@
     <TextView
         android:layout_width="125dp"
         android:layout_height="40dp"
-        android:text="First Name"
+        android:text="Subject/Tittle"
         android:id="@+id/textView2"
         android:textColor="#000000"
         android:layout_below="@+id/textView"
@@ -30,8 +30,8 @@
     <EditText
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:id="@+id/fname"
-        android:hint="First Name"
+        android:id="@+id/complaint"
+        android:hint="tittle of complaint"
         android:textColor="#000000"
         android:layout_alignTop="@+id/textView2"
         android:layout_alignParentRight="true"
@@ -40,7 +40,7 @@
     <TextView
         android:layout_width="125dp"
         android:layout_height="40dp"
-        android:text="Last Name"
+        android:text="Institute"
         android:textColor="#000000"
         android:id="@+id/textView3"
         android:layout_below="@+id/textView2"
@@ -52,7 +52,7 @@
         android:layout_height="40dp"
         android:textColor="#000000"
         android:id="@+id/lname"
-        android:hint="Last Name"
+        android:hint="Institute Name"
         android:layout_alignTop="@+id/textView3"
         android:layout_alignParentRight="true"
         android:textSize="15dp"/>
@@ -61,7 +61,7 @@
         android:layout_width="125dp"
         android:layout_height="40dp"
         android:textColor="#000000"
-        android:text="Email"
+        android:text="Town/UC"
         android:id="@+id/textView4"
         android:layout_below="@+id/textView3"
         android:layout_alignRight="@+id/textView3"
@@ -74,7 +74,7 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/email"
-        android:hint="E-mail"
+        android:hint="UC "
         android:layout_below="@+id/lname"
         android:layout_alignParentRight="true"
         android:textSize="15dp"/>
@@ -83,7 +83,7 @@
         android:layout_width="125dp"
         android:layout_height="40dp"
         android:textColor="#000000"
-        android:text="Username"
+        android:text="Employee Name"
         android:id="@+id/textView5"
         android:layout_below="@+id/textView4"
         android:layout_alignRight="@+id/textView4"
@@ -94,7 +94,7 @@
         android:layout_height="40dp"
         android:textColor="#000000"
         android:id="@+id/uname"
-        android:hint="Username"
+        android:hint="en"
         android:layout_alignTop="@+id/textView5"
         android:layout_alignParentRight="true"
         android:textSize="15dp"/>
@@ -106,7 +106,7 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/pword"
-        android:hint="Password"
+        android:hint="scale "
         android:layout_alignLeft="@+id/uname"
         android:layout_below="@+id/textView5"
         android:textSize="15dp"/>
@@ -115,7 +115,7 @@
         android:layout_width="125dp"
         android:layout_height="40dp"
         android:textColor="#000000"
-        android:text="Password"
+        android:text="Designation"
         android:id="@+id/textView6"
         android:layout_alignTop="@+id/pword"
         android:layout_alignRight="@+id/textView5"
@@ -127,20 +127,122 @@
         android:textColor="#000000"
         android:text="Register"
         android:id="@+id/register"
-        android:layout_below="@+id/textView6"
-        android:layout_alignRight="@+id/textView2"
-        android:textSize="13dp"/>
+        android:textSize="13dp"
+        android:layout_alignTop="@+id/bktologin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="175dp"
         android:layout_height="40dp"
         android:textColor="#000000"
-        android:text="Back To Login"
+        android:text="Cancel"
         android:id="@+id/bktologin"
-        android:layout_below="@+id/pword"
+        android:textSize="13dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:textSize="13dp"/>
+        android:layout_alignParentEnd="true" />
 
+    <TextView
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:textColor="#000000"
+        android:text="Institute Catg"
+        android:id="@+id/textView8"
+        android:textSize="15dp"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Govt."
+        android:id="@+id/checkBox"
+        android:checked="false"
+        android:layout_alignTop="@+id/textView8"
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Private"
+        android:id="@+id/checkBox2"
+        android:checked="false"
+        android:layout_alignTop="@+id/checkBox"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:textColor="#000000"
+        android:text="Police Station"
+        android:id="@+id/textView10"
+        android:textSize="15dp"
+        android:layout_alignRight="@+id/textView6"
+        android:layout_alignEnd="@+id/textView6"
+        android:layout_below="@+id/textView8" />
+
+    <TextView
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:textColor="#000000"
+        android:text="Evidence "
+        android:id="@+id/textView12"
+        android:textSize="15dp"
+        android:layout_below="@+id/textView10"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:textColor="#000000"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:hint="UC "
+        android:textSize="15dp"
+        android:layout_below="@+id/checkBox"
+        android:text="Near Police Station"
+        android:layout_alignLeft="@+id/pword"
+        android:layout_alignStart="@+id/pword" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Type Your Detail "
+        android:id="@+id/textView13"
+        android:layout_below="@+id/editText2"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2"
+        android:layout_alignBottom="@+id/textView12"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_alignEnd="@+id/editText2" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        android:id="@+id/upload"
+        android:layout_below="@+id/textView13"
+        android:layout_alignRight="@+id/textView13"
+        android:layout_alignEnd="@+id/textView13"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Video/Audio/.PNG"
+        android:id="@+id/textView11"
+        android:layout_alignBottom="@+id/button15"
+        android:layout_toLeftOf="@+id/button15"
+        android:layout_toStartOf="@+id/button15" />
 
 
 </RelativeLayout>

@@ -129,15 +129,7 @@
         android:layout_alignStart="@+id/multiAutoCompleteTextView"
         android:layout_alignTop="@+id/videoView2" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Already Have A account"
-        android:longClickable="true"
-        android:id="@+id/button9"
-        android:layout_alignBottom="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+
 
 
 </RelativeLayout>

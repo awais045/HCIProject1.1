@@ -12,5 +12,6 @@
     <string name="title_activity_complaint_rgsrn">complaint_rgsrn</string>
     <string name="title_activity_final_complaintrgstr">final_complaintrgstr</string>
     <string name="title_activity_user">User</string>
+    <string name="title_activity_complaintdetail">complaintdetail</string>
 
 </resources>

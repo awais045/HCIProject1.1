@@ -12,6 +12,13 @@ public class complaint_rgsrn extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complaint_rgsrn);
+
+
+
+
+
+
+
     }
 
 

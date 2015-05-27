@@ -39,7 +39,7 @@ public class register extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent i=new Intent(register.this,MainActivity.class);
+                Intent i=new Intent(register.this,login.class);
                 startActivity(i);
 
             }
