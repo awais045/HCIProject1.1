@@ -48,7 +48,9 @@
         android:background="@android:color/holo_blue_dark"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/button2"
-        android:layout_toEndOf="@+id/button2" />
+        android:layout_toEndOf="@+id/button2"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="20dp" />
 
     <EditText
         android:layout_width="wrap_content"

@@ -16,7 +16,7 @@ public class Test extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
 
-        Button button5 = (Button) findViewById(R.id.button5);
+        Button button5 = (Button) findViewById(R.id.button9);
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

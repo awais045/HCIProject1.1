@@ -52,6 +52,15 @@ public class final_complaintrgstr extends ActionBarActivity {
             }
         });
 
+        Button button33 = (Button) findViewById(R.id.login);
+        button33.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(final_complaintrgstr.this, Welcome.class);
+                startActivity(i);
+            }
+        });
+
 
 
 

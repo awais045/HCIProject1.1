@@ -12,25 +12,23 @@ import android.widget.Toast;
 
 
 public class login extends ActionBarActivity {
-    EditText editTextemail,editTextPassword;
-    Button btnCreateAccount;
-    LoginDataBaseAdapter loginDataBaseAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Button button5 = (Button) findViewById(R.id.button5);
-        button5.setOnClickListener(new View.OnClickListener() {
+        Button button = (Button) findViewById(R.id.button55);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(login.this, Welcome.class);
                 startActivity(i);
             }
         });
-        Button button6 = (Button) findViewById(R.id.button6);
-        button5.setOnClickListener(new View.OnClickListener() {
+        Button button1 = (Button) findViewById(R.id.button6);
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(login.this, register.class);
@@ -42,38 +40,7 @@ public class login extends ActionBarActivity {
 
 
 
-        // get Instance  of Database Adapter
-        loginDataBaseAdapter = new LoginDataBaseAdapter(this);
-        loginDataBaseAdapter = loginDataBaseAdapter.open();
-
-        // Get Refferences of Views
-        editTextemail = (EditText) findViewById(R.id.editTextemail);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-
-        btnCreateAccount = (Button) findViewById(R.id.button5);
-
-        btnCreateAccount.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                Intent i = new Intent(login.this, register.class);
-
-                String userName = editTextemail.getText().toString();
-                String password = editTextPassword.getText().toString();
-
-
-                // Save the Data in Database
-                loginDataBaseAdapter.insertEntry(userName, password);
-                Toast.makeText(getApplicationContext(), "Account Successfully Created ", Toast.LENGTH_LONG).show();
-            }
-        });
     }
 
-    @Override
-    protected void onDestroy() {
-        // TODO Auto-generated method stub
-        super.onDestroy();
 
-        loginDataBaseAdapter.close();
-    }
 }

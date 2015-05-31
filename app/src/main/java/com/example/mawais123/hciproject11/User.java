@@ -16,7 +16,7 @@ public class User extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
 
-        Button button5 = (Button) findViewById(R.id.button5);
+        Button button5 = (Button) findViewById(R.id.login);
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,9 +1,12 @@
 package com.example.mawais123.hciproject11;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class complaint_rgsrn extends ActionBarActivity {
@@ -13,6 +16,14 @@ public class complaint_rgsrn extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complaint_rgsrn);
 
+        Button button = (Button) findViewById(R.id.register);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(complaint_rgsrn.this, final_complaintrgstr.class);
+                startActivity(i);
+            }
+        });
 
 
 

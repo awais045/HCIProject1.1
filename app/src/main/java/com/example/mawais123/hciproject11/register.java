@@ -22,7 +22,7 @@ public class register extends ActionBarActivity {
         setContentView(R.layout.activity_register);
 
 
-        Button button3=(Button)findViewById(R.id.button3);
+        Button button3=(Button)findViewById(R.id.button33);
         button3.setOnClickListener(new View.OnClickListener() {
 
             @Override
